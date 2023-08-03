@@ -1,4 +1,4 @@
-# rubiks-clock-v
+# rubiks-clock-simple
 Show the time of day on a Rubik's cube.
 
 This is an implementation related to the javascript Clock implemented here: https://github.com/mhirst1960/rubiks-clock
