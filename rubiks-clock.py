@@ -16,6 +16,8 @@
 # License: MIT
 #
 
+import argparse
+
 import schedule
 import time
 import datetime
@@ -32,13 +34,30 @@ def showNextMinute():
 
     hour = int(soon.hour)
     min = int(soon.minute)
-    filename = f"videos/12hourclock-800x480/rubiks-clock-{hour:02d}{min:02d}.mpg"
+    filename = f"{videoDir}/rubiks-clock-{hour:02d}{min:02d}.mpg"
     
     video = vlcInstance.media_new(filename)
     player.set_media(video)
 
     player.play()
 
+parser = argparse.ArgumentParser(prog='rubiks-clock', description="Shows time of day on a Rubik's Cube")
+parser.add_argument('--type', choices=["12", "24"], default="12")
+#parser.add_argument('-12', dest='doClock12', action='store_true')
+#parser.add_argument('-24', dest='doClock12', action='store_false')
+#parser.set_defaults(doClock12=True)
+
+args = parser.parse_args()
+
+print (f"type = {args.type}")
+if args.type == "12":
+    videoDir = "videos/12hourclock-800x480"
+else:
+    videoDir = "videos/24hourclock-800x480"
+
+print (f"videos in {videoDir}")
+
+exit
 
 vlcInstance = vlc.Instance("--aout=alsa")
 player = vlcInstance.media_player_new()
