@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 75%;
+  height: 75%;
+  object-fit: fill;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background-color: black;
+  font-family: Roboto, "Arial Rounded MT Bold", sans-serif;  
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+}
+

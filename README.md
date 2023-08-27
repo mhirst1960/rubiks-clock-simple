@@ -17,6 +17,8 @@ On Raspberry Pi do this from command line:
     sudo apt-get install vlc-bin vlc-plugin-base 
     pip3 install schedule
 
+    sudo apt-get update
+    sudo apt-get install imagemagick
 
 # Run
 
