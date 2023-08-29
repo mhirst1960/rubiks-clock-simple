@@ -9,7 +9,21 @@ which adds up to about 900 Megabytes for each of these two variations for 800x48
 This version that shows different video clip every minute.  The videos are simply screen-shot recordings of the javascript version
 of rubiks-clock.
 
-# Installation
+# Java Script
+
+You can open index.html in any browser.  It will show a low-resolution 12-hour clock.
+
+If you want a 24-hour clock, you can modify clock.js and change the clock type like this:
+
+  var clockType = "24"
+
+# Python script
+
+TODO: VLC does not support gif so python script does not work!
+    I'm working on a python solution.  Meanwhile, you can use above Javascript i a browser.
+
+There is also a python script that shows an example of how to run this on a Raspberry Pi using the VLC media player.
+## Installation
 
 On Raspberry Pi do this from command line:
 
@@ -20,7 +34,10 @@ On Raspberry Pi do this from command line:
     sudo apt-get update
     sudo apt-get install imagemagick
 
-# Run
+    maybe??? pip3 install MoviePy
+
+    maybe?? pip install tk-tools
+## Run
 
 By default it runs a 12-hour (AM/PM) clock.  But if you give it the argument '--type 24' it will show a clock that goes from 00:00 to 23:59:
 
@@ -28,4 +45,3 @@ By default it runs a 12-hour (AM/PM) clock.  But if you give it the argument '--
     python3 rubiks-clock.py --type 24
 
 
-<img width="1347" alt="Screenshot 2023-08-02 at 11 39 52 PM" src="https://github.com/mhirst1960/rubiks-clock-v/assets/6749076/bc3f74f5-044e-4ccd-b01e-c4566cecda3a">
